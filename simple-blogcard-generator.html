@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='リッチリンクを手軽に作成！ ブログカードジェネレーター' property='og:title'/>
+<meta content='http://io.cottpic.com/simple-blogcard-generator.html' property='og:url'/>
+<meta content='article' property='og:type'/>
+<meta content='Cottpic' property='og:site_name'/>
+<meta content='Your Default OG Image URL Here' property='og:image'/>
+<meta content='画像以外は外部サービスに依存しないタイプのブログカードを手軽に作成できるツールです。入力したURLのページのOGPタグから、サイト名、ディスクリプション、OGP画像のURL等を取得できます。' name='og:description'/>
+<title>リッチリンクを手軽に作成&#65281; ブログカードジェネレーター - Cottpic</title>
+<meta content='summary_large_image' name='twitter:card'/>
+<meta content='https://www.cottpic.com/' name='twitter:domain'/>
+<meta content='http://io.cottpic.com/simple-blogcard-generator.html' name='twitter:url'/>
+<meta content='リッチリンクを手軽に作成！ ブログカードジェネレーター' name='twitter:title'/>
+
+<meta content='blogger' name='generator'/>
+<link href='favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://io.cottpic.com/simple-blogcard-generator.html' rel='canonical'/>
+<meta content='画像以外は外部サービスに依存しないタイプのブログカードを手軽に作成できるツールです。入力したURLのページのOGPタグから、サイト名、ディスクリプション、OGP画像のURL等を取得できます。' name='description'/>
+      <!--Import Google Icon Font-->
+      <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'/>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-9888698185025568",
+          enable_page_level_ads: true
+     });
+</script>
+
+      
+      
+ <style>
+   body {font-family: Meiryo,apple-system,BlinkMacSystemFont,YuGothic,'Helvetica Neue', Helvetica, Arial,Verdana,sans-serif;}
+ </style>
+    </head>
+
+    <body style="background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX3hFYzFuIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjE2IiBzdHJva2U9IiNGMEYwRjAiIHN0cm9rZS13aWR0aD0iMzAiLz48L3BhdHRlcm4+PC9kZWZzPiA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm5feEVjMW4pIiBvcGFjaXR5PSIxIi8+PC9zdmc+)">
+
+  <nav class="blue-grey darken-4">
+    <div class="nav-wrapper container">
+
+      <a href="https://www.cottpic.com/" class="brand-logo"><h1 style="margin:0"><img alt="Cottpic" class="img-logo-header" src="https://2.bp.blogspot.com/-6P1kb0aPMYk/XGVSvfYH_gI/AAAAAAAABTQ/SM2zompKNnMmwznnXonULw7SyTGjO2elwCLcBGAs/s1600/cottpic.gif" title="Cottpic" style="line-height: 0;"/></h1></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="https://www.cottpic.com/p/about.html" target="_blank"><b>About Cottpic</b></a></li>
+        <!--<li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>-->
+      </ul>
+    </div>
+  </nav>
+
+<div class="container" style="margin-top:1.5rem">
+<div class="row"><span class="col s12 l9">
+<style>.headline_meta,.breadcrumbs.card{display:none;} #preloadersw.invisible{display:none;}</style>
+
+<h2 style="font-size: 24px; font-weight: 600;  margin: .5rem 0; text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc, 1px 2px 1px #eeeeee;">リッチリンクを手軽に作成！ ブログカードジェネレーター</h2>
+
+<span>
+<div class="input-field col s12">
+          <i class="material-icons prefix">public</i>
+          <input id="icon_prefix" type="text" class="exselect validate bblogurl">
+          <label for="icon_prefix" class="truncate teal-text">ブログカードを作成したいサイトのURL</label>
+</div>
+
+<a id="bcardgen" class="waves-effect waves-light btn cyan"><i class="material-icons left">toys</i>ブログカードを生成<i class="material-icons right">toys</i></a>
+
+
+
+<form name="ogptmb" style="margin-bottom: 2rem;">
+    <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box" name="ogpthumbnail"/>
+      <label for="filled-in-box" class="blue-grey-text text-darken-4">アイキャッチ画像を取得</label>
+    </p>
+    <p>
+      <input type="checkbox" class="filled-in" id="filled-in-box2" name="googfavicon"/>
+      <label for="filled-in-box2" class="blue-grey-text text-darken-4">Google API から Favicon 画像を取得</label>
+    </p>
+  </form>
+
+<div id="preloadersw" class="col s12 center invisible" style="overflow:hidden;">
+            <div class="preloader-wrapper active">
+              <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+              <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+              <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+              <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+</div>
+
+<div class='bbcard-wrapper-wrapper'></div>
+</span>
+
+
+<style>.dr-second{margin:1rem 0;max-width:336px;}</style>
+
+<!-- cottpics_main_Blog1_1x1_as -->
+<div style="text-align:center;">
+<!--<ins class="adsbygoogle dr-first" data-ad-client="ca-pub-9888698185025568" data-ad-format="horizontal" data-ad-slot="2418470624" data-full-width-responsive="false" style="display:block"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>-->
+<!-- cottpics_main_Blog2_1x1_as -->
+<!--<ins class="adsbygoogle dr-second" data-ad-client="ca-pub-9888698185025568" data-ad-format="rectangle" data-ad-slot="6895751819" data-full-width-responsive="false" style="display:block"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>-->
+</div><!-- End Blog1_1x1_as & Blog2_1x1_as-->
+
+
+
+<div class="bcard-wrapper"><span class="bcard-header withgfav"><div class="bcard-favicon" style="background-image: url(https://www.google.com/s2/favicons?domain=https://www.cottpic.com/)"></div><div class="bcard-site"><a href="https://www.cottpic.com/" rel="nofollow" target="_blank">Cottpic</a></div><div class="bcard-url"><a href="https://www.cottpic.com/" rel="nofollow" target="_blank">https://www.cottpic.com/</a></div></span><span class="bcard-main"><div class="bcard-title"><a href="https://www.cottpic.com/" rel="nofollow" target="_blank">ブログカードのサンプルです 以下のCSSを合わせて適用することで はてなブログ風のカードが作成できます</a></div><div class="bcard-description">使い方は簡単、生成されたHTMLコードをコピー&amp;ペーストするだけです。画像以外は外部のサービスに依存しません (画像の直リンクが許可されていないサイトの場合は、アイキャッチ画像のURL参照はお控え頂きますようお願いいたします)。</div></span></div>
+
+<div class='outputouter cssample'><span class='outputtab'>CSS</span><textarea class='exselect'><style>
+.bcard-wrapper{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0px;
+    border-radius: 3px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+}
+.bcard-site,.bcard-url{
+    font-size: 12px;
+    line-height: 1.3;
+    overflow: hidden;
+    max-height: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.bcard-header {
+    position: relative;
+    height: 30px;
+    margin-bottom: 5px;
+    display: block;
+}
+.withgfav{padding-left: 23px;}
+.bcard-favicon {position: absolute;
+    top: 0px; left:0px; width:16px; height:16px;}
+.bcard-main{
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+.withogimg{
+    padding-right: 110px;
+    height: 100px;
+}
+ .bcard-img {
+width: 100px;
+height: 100px; 
+position: absolute;
+    top: 0;
+    right: 0;
+    background-size:cover;
+    background-position:center center;
+}
+ .bcard-title{
+    font-size: 17px;
+    margin: 0 0 2px;
+    line-height: 1.4;
+    max-height: 47px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: bold;
+}
+ .bcard-description {
+    line-height: 1.5;
+    font-size: 12px;
+    max-height: 72px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.bcard-title a{color:#424242;}
+.bcard-url a{color:#9e9e9e;}
+.bcard-title a:hover,.bcard-url a:hover,.bcard-site a:hover{text-decoration:underline;}
+</style></textarea></div>
+
+
+<h5 style="font-size:18px; font-weight:600;">使い方</h5>
+
+<div class="card-panel" style="line-height: 1;"><span class="">
+<b>1.</b> ブログカードを作成したいサイトのURLを入力して、「ブログカードを生成」ボタンを押します
+          </span></div>
+
+<div class="card-panel" style="line-height: 1;"><span class="">
+<b>2.</b> <b>生成されたHTML</b>と<b>上のCSS</b>の二つのコードをBlogなどのHTML編集画面に貼り付けて下さい<br><br>
+改行を取り除いたCSSは以下からコピーできます。
+          </span></div>
+
+<ul class="collapsible" data-collapsible="expandable">
+    <li>
+      <div class="collapsible-header"><i class="material-icons orange-text" aria-hidden="true">add_circle</i><b>改行を取り除いたCSS</b></div>
+      <div class="collapsible-body" style="padding:0;"><textarea class=" grey lighten-3" style="width:100%; border:none; padding:12px; max-width:100%; min-width:99.9999%; height:200px;">&lt;style&gt;.bcard-wrapper{ display: block; width: 100%; max-width: 500px; margin: 10px 0px; border-radius: 3px; padding: 12px; border: 1px solid #e0e0e0;}.bcard-site,.bcard-url{ font-size: 12px; line-height: 1.3; overflow: hidden; max-height: 15px; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;}.bcard-header { position: relative; height: 30px; margin-bottom: 5px; display: block;}.withgfav{padding-left: 23px;}.bcard-favicon {position: absolute; top: 0px; left:0px; width:16px; height:16px;}.bcard-main{ overflow: hidden; position: relative; display: block;}.withogimg{ padding-right: 110px; height: 100px;} .bcard-img {width: 100px;height: 100px; position: absolute; top: 0; right: 0; background-size:cover; background-position:center center;} .bcard-title{ font-size: 17px; margin: 0 0 2px; line-height: 1.4; max-height: 47px; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-weight: bold;} .bcard-description { line-height: 1.5; font-size: 12px; max-height: 72px; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;}.bcard-title a{color:#424242;}.bcard-url a{color:#9e9e9e;}.bcard-title a:hover,.bcard-url a:hover,.bcard-site a:hover{text-decoration:underline;}&lt;/style&gt;</textarea></div>
+    </li>
+</ul>
+
+
+<div class="card-panel" style="line-height: 1.5;"><span class="">
+<b>注意点</b><br>このツールでは、入力したURLのページのOGP情報を取得します。<b>OGPが設定されていないサイトの場合には、正しくブログカードが作成されません。</b><br><br>また、繰り返しになりますが、<b>アイキャッチ画像の取得</b>については、相手方のサーバに負荷が掛かる可能性がありますので、<b>画像の直リンクが許可されていないサイトの場合はブログカードからの直接のURL参照はお控え頂きますようお願いいたします</b>。
+          </span></div>
+
+
+
+<h5 style="font-size:18px; font-weight:600;">参考サイト</h5>
+
+<div class='bcard-wrapper'><span class='bcard-header withgfav'><span class="bcard-favicon" style="background-image: url(https://www.google.com/s2/favicons?domain=http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92);width:16px;height:16px;"></span><div class='bcard-site'><a href='http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92' rel='nofollow' target='_blank'>blazechariot -Xdomain-</a></div><div class='bcard-url'><a href='http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92' rel='nofollow' target='_blank'>http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92</a></div></span><span class='bcard-main'><div class='bcard-title'><a href='http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92' rel='nofollow' target='_blank'>Simplicityを少し改造してみた 番外編part18 外部サイトのogpを取得してブログカードを作る</a></div><div class='bcard-description'>外部サイトのブログカードのスタイルが現在ははてブのapiを利用しているため、スタイルができないと言う事がありましたので、色々やってみました。 外部サイトのogpが読めれば、後は整形して出力なので色々とできる可能性は広がります。 ここの元の内容はSimplicity公式のフォーラムに投稿したものです。 比較的簡単なので、問題的にはセキュリティをどうするかのみかと思います。比較的簡単と言えど、それなりに関係性を把握しないとアレなので初心者向けではないかも知れません。 必要なもの OpenGraph.php https://github.com/scottmac/opengraph/blob/master/OpenGraph.php Apache Licenseです。 前準備 子テーマでテストをしたので子テーマのlibディレクトリにopengraph.phpと、ajaxでデータをやり取りするためのch_blogcard.php(名前は適当)を設置。 ch_blogcard.php  これはjQueryのajaxでこのファイルに対して通信して、データをjson出力するためのものです。またテストなのでセキュリティ的なものは考慮してませんのでご了承下さい。 子テーマlibディレクトリにopengraph.phpがある場合は上記のまま。別途ディレクトリを変える場合は、require_onceと以下のajaxでのアドレスが要変更。 jQueryのajaxでデータを取得して表示するためのスクリプト(子テーマjavascript.js)  使い方 記事編集画面で、  として外部のogpが設置してあるサイトのアドレスを入れる。複数設置してもok(複数の.exBlogと言う意味)。 出力されるhtml  これら構造・class名はjQueryで変更可能。 このサムネイルのようにして出力されます。後はこれに合わせてcssでスタイルするだけ。 画像上に表示されているのは、Xdomainの自サイト記事のデータ(このサイトの記事のogpから出力したもの)、下はSimplicity公式の記事ページです。表示自体はcloud9のテストページです。 ajaxで処理しているので、色々とすることも可能ですが、現状は非同期で読み込むだけです。 例えば、functions</div></span></div>
+<div class='bcard-wrapper'><span class='bcard-header withgfav'><span class="bcard-favicon" style="background-image: url(https://www.google.com/s2/favicons?domain=http://kimagureneet.hatenablog.com/entry/2016/07/15/233903);width:16px;height:16px;"></span><div class='bcard-site'><a href='http://kimagureneet.hatenablog.com/entry/2016/07/15/233903' rel='nofollow' target='_blank'>とりあえずphpとか</a></div><div class='bcard-url'><a href='http://kimagureneet.hatenablog.com/entry/2016/07/15/233903' rel='nofollow' target='_blank'>http://kimagureneet.hatenablog.com/entry/2016/07/15/233903</a></div></span><span class='bcard-main'><div class='bcard-title'><a href='http://kimagureneet.hatenablog.com/entry/2016/07/15/233903' rel='nofollow' target='_blank'>OpenGraph.phpの文字化け対応する方法メモ - とりあえずphpとか</a></div><div class='bcard-description'>https://github.com/scottmac/opengraph こちらを使ってogpを解析しようとしたら文字化けしたので対応方法をメモ</div></span></div>
+
+
+<script type="text/javascript">
+ // <![CDATA[
+ 
+    $('.exselect')
+        .focus(function(){
+            $(this).select();
+        });
+
+    $('.collapsible-body textarea')
+        .focus(function(){
+            $(this).select();
+        });
+
+
+// ]]>
+</script>
+
+
+
+<script type="text/javascript">
+ // <![CDATA[
+var waitsw = 0;
+
+$(document).on('click',"#bcardgen",function () {
+if ($(".bblogurl").val() != "" && waitsw == 0){
+
+waitsw = 1;
+$("#preloadersw").toggleClass("invisible");
+
+(function($){
+  var blogcard = {
+    ajax: function(url) {
+      var def = $.Deferred();
+      $.ajax({
+        type: "GET",
+        url: "http://cottpics.php.xdomain.jp/3AJwQ6bfVs/bblogcard.php",
+        data: {"url": url},
+        dataType: "json",
+        success: def.resolve,
+        error: def.reject
+      });
+      return def.promise();
+    },
+    output: function( selector, json ){
+      if (json.site_name != null) {var site_name = json.site_name}else{var site_name = ""};
+      if (json.url != null) {var url = json.url}else{var url = $(".bblogurl").val()};
+      if (json.title != null) {var title = json.title}else{var title = ""};
+      if (json.description != null) {var description = json.description}else{var description = ""};
+      if (json.image != null) {var image = json.image};
+      
+
+if (document.ogptmb.ogpthumbnail.checked && json.image != null){
+      if (document.ogptmb.googfavicon.checked){
+      $('<div class="bcard-wrapper"><span class="bcard-header withgfav"><div class="bcard-favicon" style="background-image: url&#40;https://www.google.com/s2/favicons?domain=' + url + '&#41;"></div><div class="bcard-site"><a href="' + url + '" rel="nofollow" target="_blank">' + site_name + '</a></div><div class="bcard-url"><a href="' + url + '" rel="nofollow" target="_blank">' + url + '</a></div></span><span class="bcard-main withogimg"><div class="bcard-title"><a href="' + url + '" rel="nofollow" target="_blank">' + title + '</a></div><div class="bcard-description">' + description + '</div><a href="' + url + '" rel="nofollow" target="_blank"><div class="bcard-img" style="background-image: url&#40;' + image + '&#41;"></div></a></span></div><div class="outputouter"><span class="outputtab">HTML</span><textarea class="outputclip">&lt;div class=&#034;bcard-wrapper&#034;&gt;&lt;span class=&#034;bcard-header withgfav&#034;&gt;&lt;div class=&#034;bcard-favicon&#034; style=&#034;background-image: url&#40;https://www.google.com/s2/favicons?domain=' + url + '&#41;&#034;&gt;&lt;/div&gt;&lt;div class=&#034;bcard-site&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + site_name + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-url&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + url + '&lt;/a&gt;&lt;/div&gt;&lt;/span&gt;&lt;span class=&#034;bcard-main withogimg&#034;&gt;&lt;div class=&#034;bcard-title&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + title + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-description&#034;&gt;' + description + '&lt;/div&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;&lt;div class=&#034;bcard-img&#034; style=&#034;background-image: url&#40;' + image + '&#41;&#034;&gt;&lt;/div&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;</textarea></div>').insertAfter(".bbcard-wrapper-wrapper");
+      }else{
+       $('<div class="bcard-wrapper"><span class="bcard-header"><div class="bcard-site"><a href="' + url + '" rel="nofollow" target="_blank">' + site_name + '</a></div><div class="bcard-url"><a href="' + url + '" rel="nofollow" target="_blank">' + url + '</a></div></span><span class="bcard-main withogimg"><div class="bcard-title"><a href="' + url + '" rel="nofollow" target="_blank">' + title + '</a></div><div class="bcard-description">' + description + '</div><a href="' + url + '" rel="nofollow" target="_blank"><div class="bcard-img" style="background-image: url&#40;' + image + '&#41;"></div></a></span></div><div class="outputouter"><span class="outputtab">HTML</span><textarea class="outputclip">&lt;div class=&#034;bcard-wrapper&#034;&gt;&lt;span class=&#034;bcard-header&#034;&gt;&lt;div class=&#034;bcard-site&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + site_name + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-url&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + url + '&lt;/a&gt;&lt;/div&gt;&lt;/span&gt;&lt;span class=&#034;bcard-main withogimg&#034;&gt;&lt;div class=&#034;bcard-title&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + title + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-description&#034;&gt;' + description + '&lt;/div&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;&lt;div class=&#034;bcard-img&#034; style=&#034;background-image: url&#40;' + image + '&#41;&#034;&gt;&lt;/div&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;</textarea></div>').insertAfter(".bbcard-wrapper-wrapper");
+      };
+}else{
+        if (document.ogptmb.googfavicon.checked){
+         $('<div class="bcard-wrapper"><span class="bcard-header withgfav"><div class="bcard-favicon" style="background-image: url&#40;https://www.google.com/s2/favicons?domain=' + url + '&#41;"></div><div class="bcard-site"><a href="' + url + '" rel="nofollow" target="_blank">' + site_name + '</a></div><div class="bcard-url"><a href="' + url + '" rel="nofollow" target="_blank">' + url + '</a></div></span><span class="bcard-main"><div class="bcard-title"><a href="' + url + '" rel="nofollow" target="_blank">' + title + '</a></div><div class="bcard-description">' + description + '</div></span></div><div class="outputouter"><span class="outputtab">HTML</span><textarea class="outputclip">&lt;div class=&#034;bcard-wrapper&#034;&gt;&lt;span class=&#034;bcard-header withgfav&#034;&gt;&lt;div class=&#034;bcard-favicon&#034; style=&#034;background-image: url&#40;https://www.google.com/s2/favicons?domain=' + url + '&#41;&#034;&gt;&lt;/div&gt;&lt;div class=&#034;bcard-site&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + site_name + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-url&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + url + '&lt;/a&gt;&lt;/div&gt;&lt;/span&gt;&lt;span class=&#034;bcard-main&#034;&gt;&lt;div class=&#034;bcard-title&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + title + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-description&#034;&gt;' + description + '&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</textarea></div>').insertAfter(".bbcard-wrapper-wrapper");
+        
+
+
+        
+       }else{
+        $('<div class="bcard-wrapper"><span class="bcard-header"><div class="bcard-site"><a href="' + url + '" rel="nofollow" target="_blank">' + site_name + '</a></div><div class="bcard-url"><a href="' + url + '" rel="nofollow" target="_blank">' + url + '</a></div></span><span class="bcard-main"><div class="bcard-title"><a href="' + url + '" rel="nofollow" target="_blank">' + title + '</a></div><div class="bcard-description">' + description + '</div></span></div><div class="outputouter"><span class="outputtab">HTML</span><textarea class="outputclip">&lt;div class=&#034;bcard-wrapper&#034;&gt;&lt;span class=&#034;bcard-header&#034;&gt;&lt;div class=&#034;bcard-site&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + site_name + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-url&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + url + '&lt;/a&gt;&lt;/div&gt;&lt;/span&gt;&lt;span class=&#034;bcard-main&#034;&gt;&lt;div class=&#034;bcard-title&#034;&gt;&lt;a href=&#034;' + url + '&#034; rel=&#034;nofollow&#034; target=&#034;_blank&#034;&gt;' + title + '&lt;/a&gt;&lt;/div&gt;&lt;div class=&#034;bcard-description&#034;&gt;' + description + '&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</textarea></div>').insertAfter(".bbcard-wrapper-wrapper");
+       };
+};
+
+
+$("#preloadersw").toggleClass("invisible");
+       
+            $('.outputclip')
+        .focus(function(){
+            $(this).select();
+        });
+
+     if (json.title == null) {alert('\u30DA\u30FC\u30B8\u306E\u30BF\u30A4\u30C8\u30EB\u3092\u53D6\u5F97\u3067\u304D\u307E\u305B\u3093\u3067\u3057\u305F\u3002\u004F\u0070\u0065\u006E\u0020\u0047\u0072\u0061\u0070\u0068\u0020\u0050\u0072\u006F\u0074\u006F\u0063\u006F\u006C\u304C\u8A2D\u5B9A\u3055\u308C\u3066\u3044\u306A\u3044\u30B5\u30A4\u30C8\u306E\u5834\u5408\u3001\u60C5\u5831\u304C\u6B63\u3057\u304F\u53D6\u5F97\u3055\u308C\u307E\u305B\u3093')};
+
+waitsw = 0;
+    }
+  };
+
+
+
+
+  $(function(){
+    
+    $(".bblogurl").each(function(){
+      var url = $(this).val(),
+        elem = $(this);
+      
+      blogcard.ajax(url).done(function(data){
+        blogcard.output( elem, data );
+      });
+    });
+    
+  });
+})(jQuery);
+
+
+};
+});
+// ]]>
+</script>
+
+
+
+
+
+
+<style>
+.bcard-wrapper{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0px;
+    border-radius: 3px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    background-color:#fff;
+}
+.bcard-site,.bcard-url{
+    font-size: 12px;
+    line-height: 1.3;
+    overflow: hidden;
+    max-height: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.bcard-header {
+    position: relative;
+    height: 30px;
+    margin-bottom: 5px;
+    display: block;
+}
+.withgfav{padding-left: 23px;}
+.bcard-favicon {position: absolute;
+    top: 0px; left:0px; width:16px; height:16px;}
+.bcard-main{
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+.withogimg{
+    padding-right: 110px;
+    height: 100px;
+}
+ .bcard-img {
+width: 100px;
+height: 100px; 
+position: absolute;
+    top: 0;
+    right: 0;
+    background-size:cover;
+    background-position:center center;
+}
+ .bcard-title{
+    font-size: 17px;
+    margin: 0 0 2px;
+    line-height: 1.4;
+    max-height: 47px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-weight: bold;
+}
+ .bcard-description {
+    line-height: 1.5;
+    font-size: 12px;
+    max-height: 72px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.bcard-title a{color:#424242;}
+.bcard-url a{color:#9e9e9e;}
+.bcard-title a:hover,.bcard-url a:hover, .bcard-site a:hover{text-decoration:underline;}
+</style>
+
+
+
+
+
+<style>
+.outputouter textarea{
+ background-color: #fff;
+ border: 2px solid #00bcd4;
+ box-shadow: 2px 2px 2px #ccc;
+ padding: 1.2em 1em 1em;
+ min-height: 8rem;
+ width: 100%;
+ max-width: 100%;
+border-radius:0;
+}
+.outputouter { position: relative; margin: 3em auto;}
+.outputtab {
+ position: absolute;
+ display: inline-block;
+ top: -26px;
+ left: 0px;
+ padding: 1px 10px;
+ height: 26px;
+ font-weight: bold;
+ color: #fff;
+ background-color: #00bcd4;
+ border-radius: 8px 8px 0 0;
+}
+
+.cssample .outputtab {
+ background-color: #aeea00;
+}
+
+.outputouter.cssample textarea{
+ border: 2px solid #aeea00;
+}
+
+.input-field .prefix{top: 0.5rem;
+    left: 0.5rem;}
+#bcardgen:hover .material-icons{transition: .5s ;
+   transform: rotateZ( 0deg ) ;}
+#bcardgen:hover .material-icons{
+   transform: rotateZ( 360deg );}
+   </style>
+
+
+
+
+
+
+<div class="sharethis-inline-share-buttons" style="margin: 1rem 0;"></div>
+
+
+</span>
+
+<span class="col s12 l3">
+
+<style>.widget-content.popular-posts ul{margin:0;}
+.widget-content.popular-posts li a{margin:0; font-size:14px !important; color:#444 !important;}
+.widget-content.popular-posts div.title{font-size:15px !important; font-weight: 600;}
+</style>
+
+
+
+<div class="widget-content popular-posts">
+<div class="collection">
+<ul>
+
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/10/base64-inline-image-encoder.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://3.bp.blogspot.com/-0w8SRRAw3wQ/W8C5-jzUyiI/AAAAAAAAAxA/iFJ_jeq9wNwv7zExuZdtQoWib-fAv66_QCLcBGAs/w72-h72-p-k-no-nu/base64-inline-image-encoder.png" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">SVG画像をHTMLに直接埋め込み！dataURI へ変換ツール </div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/10/html-minify-and-escape.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="title">テキスト中の改行消去&amp;html特殊文字エスケープツール</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/05/wrap-text-tool.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="title">指定した文字数でテキスト改行ツール</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/08/seamless-polka-dot-generator.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://1.bp.blogspot.com/-gzvGq3ehVGQ/W7nDMZ336fI/AAAAAAAAAwk/LuwyUoNL4kQ_V6O4Dk5sZAVH6QxlpbYhQCLcBGAs/s72-c/Polka-DotPattern.png" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">Seamless Polka Dot Generator</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/09/checkered-pattern-generator.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://3.bp.blogspot.com/-Ss4pWK4M71k/W7d541TT6UI/AAAAAAAAAuU/vHfYTulhDg0vYImAGW3mdnHmbU3DE8oIgCLcBGAs/w72-h72-p-k-no-nu/Ichimatsu.gif" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">Ichimatsu Checkered Pattern Generator</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/08/seamless-stripe-generator.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://1.bp.blogspot.com/-Yi4mV4Ln640/W7nAbNYa4MI/AAAAAAAAAv8/5paAyRSAMeIVdX0GraLnYbO5vdABMKvIwCLcBGAs/w72-h72-p-k-no-nu/StripePattern.png" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">Seamless Stripe Generator</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/08/honeycomb-dot-generator.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://4.bp.blogspot.com/-J79EUh7j63Y/W7m_9UGfr-I/AAAAAAAAAv0/dGkYzguxo484-PszluIA7R7X6AEAxzppQCLcBGAs/s72-c/Honeycomb-DotPattern.png" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">Honeycomb Dot Generator</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+
+<!--
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/04/materiapollo-v0-9-1-release.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://2.bp.blogspot.com/-I147Q2H1rBs/W7msI8xLFCI/AAAAAAAAAuw/bnaDU4yysHEb_ttprDQxzuM6kxtDSa-XACLcBGAs/w72-h72-p-k-no-nu/Material-Design-Blogger-template.gif" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">Materiapolloという Blogger向けテンプレートを公開しました</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/10/embed-svg-to-blogspot.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://4.bp.blogspot.com/tblH-CxS6I/W8IEii38sxI/AAAAAAAAAxU/s_jmK-2Kiigw6kY03SCbhoAzvpJkMuqxACLcBGAs/w72-h72-p-k-no-nu/gdrive_svg1.png" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">BloggerでSVG画像を表示させる方法あれこれ</div>
+<div class="item-snippet truncate">          この記事では、Google のブログサービス Blogger で SVG ベクター画像を表示させる方法について、いくつか見ていきます。 </div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/09/customize-materiapollo-part2.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="title">Materiapolloカスタマイズのツボ２</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
+
+
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="https://www.cottpic.com/2018/04/customize-materiapollo.html" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="https://1.bp.blogspot.com/-b-LqNaAjQmk/WticUeHxyxI/AAAAAAAAAmE/d8EvyH8a3OEnva0XNTkoe7AV6OLFLAuWwCLcBGAs/w72-h72-p-k-no-nu/180419-1.png" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">Materiapollo カスタマイズのツボ</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>-->
+
+
+
+
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+
+  
+<div style="text-align:center;">
+<!-- cottpics_main_Blog2_1x1_as -->
+<ins class="adsbygoogle dr-second" data-ad-client="ca-pub-9888698185025568" data-ad-format="vertical" data-ad-slot="6895751819" data-full-width-responsive="false" style="display:block"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><!-- End Blog1_1x1_as & Blog2_1x1_as-->
+
+</span>
+
+
+
+
+
+
+
+</div></div>
+
+
+
+      <script type="text/javascript" src="/js/materialize.min.js"></script>
+    </body>
+  </html>

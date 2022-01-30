@@ -1,0 +1,191 @@
+<!doctype html>
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GMOコイン 販売所価格 早見表 - Cottpic</title>
+  <meta name="description" content="GMOコインの販売所チャートを取得して表示します。">
+
+  <meta property="og:title" content="GMOコイン 販売所価格 早見表 - Cottpic">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://io.cottpic.com/coinz/">
+  <meta property="og:description" content="GMOコインの販売所チャートを取得して表示します。">
+  <meta property="og:image" content="image.png">
+	<meta content='summary_large_image' name='twitter:card'/>
+	<meta content='https://www.cottpic.com/' name='twitter:domain'/>
+	<meta content='http://io.cottpic.com/coinz/' name='twitter:url'/>
+	<meta content='GMOコイン 販売所価格 早見表' name='twitter:title'/>
+	
+	<link href='http://io.cottpic.com/coinz/' rel='canonical'/>
+  <link rel="icon" href="favicon.ico" type='image/x-icon'/>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-9888698185025568",
+          enable_page_level_ads: true
+     });
+</script>
+
+
+</head>
+
+<body>
+  <!-- your content here... -->
+
+<style></style>
+
+<div id="container">
+
+<div id="tcontainer">
+<h1>GMOコイン 販売所価格 早見表</h1>
+<table>
+            <thead class="">
+              <tr class="">
+                <th class="">銘柄</th>
+                <th class="">BID（売）</th>
+                <th class="">ASK（買）</th>
+                <th class="">当日高値</th>
+                <th class="">当日安値</th>
+              </tr>
+            </thead>
+			
+	<tbody>
+
+	</tbody>
+</table>
+<p><b>※このページでは <a href="https://coin.z.com/api/v1/master/getCurrentRate.json" target="_blank">https://coin.z.com/api/v1/master/getCurrentRate.json</a> 
+から取得したデータを表示しています。実際の価格とは異なる可能性がありますのでご注意ください。</b></p>
+</div>
+
+<div id="ncontainer">
+
+<div  id="info" style="text-align:center;">
+	<!-- cottpics_main_Blog2_1x1_as -->
+	<ins class="adsbygoogle dr-second" data-ad-client="ca-pub-9888698185025568" data-ad-format="rectangle" data-ad-slot="6895751819" data-full-width-responsive="false" style="display:block"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+<div id="nwrap"></div><div id="news"></div>
+</div>
+
+</div>
+
+<footer><div id="backtohome"><a href="https://www.cottpic.com/">BACK TO HOME</a></div></footer>
+
+<script type="text/javascript">
+$(function() {
+
+	let coins =[ 
+						['BTC',1001],
+						['ETH',1002],
+						['BCH',1003],
+						['LTC',1004],
+						['XRP',1005],
+						['XEM',1006],
+						['XLM',1007],
+						['BAT',1008],
+						['OMG',1009],
+						['XTZ',1010],
+						['QTUM',1011],
+						['ENJ',1012],
+						['DOT',1013],
+						['ATOM',1014],
+						['ADA',1020] 
+					];
+	
+	for (let i in coins) {
+	
+		//$("tbody").append("<tr id=&quot;pid" + coins[i][1] "><th>BTC</th><td></td><td></td><td></td><td></td></tr>);
+		
+		$("tbody").append("<tr id='pid" + coins[i][1] +"'><th>"+ coins[i][0] +
+										"</th><td></td><td></td><td></td><td></td></tr>");
+	}
+
+	
+	function getmaster(){
+	
+		$.getJSON("http://cottpics.php.xdomain.jp/3AJwQ6bfVs/getmaster.php", function(data){
+			
+			var dind = data.data
+			
+			for(var i in dind){
+			
+			var pid = dind[i].productId;
+			var arr = [dind[i].bid, dind[i].ask, dind[i].highRate, dind[i].lowRate];
+			
+			//$("#pid" +pid+ " td").eq(2).html(dind[i].bid);
+			
+			/*
+			$("#pid" +pid+ " td").each(function() {
+				//$(this).eq(0).html(dind[i].bid);
+				//$(this).eq(1).html(dind[i].ask);
+				//$(this).eq(2).html(dind[i].highRate);
+				$(this).eq(3).html(dind[i].lowRate);
+				console.log(dind[i].bid);
+				console.log(dind[i].ask);
+				console.log(dind[i].lowRate);
+			});
+			*/
+
+			
+			$("#pid" +pid+ " td").each(function() {
+				var indx= $(this).index() -1;
+				$("#pid" +pid+ " td").eq(indx).html(arr[indx]);
+				/*
+					console.log($("#pid" +pid+ " td"));
+					console.log($(this));
+					console.log($(this).index());
+				*/
+			});
+			
+			
+			//$("#OK").append("<li><strong>" + data[i] + "</strong></li>");
+			//$("#OK").append("<li><strong>" + (JSON.stringify(data[i])) + i  + "</strong></li>");
+			}
+		});
+	}
+	
+	getmaster();
+	
+	setInterval(function(){
+		getmaster();
+	},5000);
+	
+	
+    $.ajax({
+        url: 'http://cottpics.php.xdomain.jp/3AJwQ6bfVs/getnews.php',
+        type: 'GET',
+        dataType: 'html',
+    })
+    .done(function(data) {
+		let newshead = "<h3>News from GMOコイン</h3>"
+		$("#nwrap").append(newshead);
+		let newslist  = $(data).find('.p-news__list');
+		$("#news").append(newslist);
+		$("#news li a").each(function() {
+		let newspath = ($(this).attr("href"));
+		$(this).attr("href","https://coin.z.com" + newspath );
+		$(this).attr("target","_blank" );
+		});
+    })
+    .fail(function( data ) {
+        // ...
+    });
+	
+
+});
+	
+</script>
+
+</body>
+
+<script>
+</script>
+
+</html>

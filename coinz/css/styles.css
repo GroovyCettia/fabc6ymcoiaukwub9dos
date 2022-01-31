@@ -9,7 +9,7 @@ p {word-wrap: break-word;}
 
   #news  {max-height: 400px; overflow: scroll; overflow-x: hidden;}
  #tcontainer table {overflow: scroll; overflow-y: hidden;}
-#backtohome {text-align : center; font-weight:bold; margin:20px 0;}
+#backhome {text-align : center; font-weight:bold; margin:20px 0;}
 
 #container {width: 100%; display: block; overflow: hidden;}
 #tcontainer {max-width:100%;}

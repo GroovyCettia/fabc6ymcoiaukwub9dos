@@ -53,6 +53,8 @@ body {background-color: #001717;color: white;}
    #tcontainer { max-width: 600px; flex: 1;}
    #ncontainer {width: 400px;}
    
+    #twrap {overflow-x: hidden;}
+    
    .adsbygoogle { margin-top: 80px;}
    
 }

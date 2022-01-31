@@ -1,11 +1,17 @@
 h1 ,h3 {padding-left:.5em}  h1{font-size: 30px;}
+p {word-wrap: break-word;}
 
+#twrap  {
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
 
   #news  {max-height: 400px; overflow: scroll; overflow-x: hidden;}
  #tcontainer table {overflow: scroll; overflow-y: hidden;}
 #backtohome {text-align : center; font-weight:bold; margin:20px 0;}
 
-#container {width: 100%;    display: block;}
+#container {width: 100%; display: block; overflow: hidden;}
 #tcontainer {max-width:100%;}
 #ncontainer {width:100%;}
 

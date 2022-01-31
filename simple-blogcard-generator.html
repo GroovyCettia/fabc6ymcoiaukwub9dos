@@ -73,18 +73,18 @@
           <label for="icon_prefix" class="truncate teal-text">ブログカードを作成したいサイトのURL</label>
 </div>
 
-<a id="bcardgen" class="waves-effect waves-light btn cyan"><i class="material-icons left">toys</i>ブログカードを生成<i class="material-icons right">toys</i></a>
+<a id="bcardgen" class="waves-effect waves-light btn cyan"><i class="material-icons left">Flare</i>ブログカードを生成<i class="material-icons right">Flare</i></a>
 
 
 
 <form name="ogptmb" style="margin-bottom: 2rem;">
     <p>
-      <input type="checkbox" class="filled-in" id="filled-in-box" name="ogpthumbnail"/>
-      <label for="filled-in-box" class="blue-grey-text text-darken-4">アイキャッチ画像を取得</label>
+      <input type="checkbox" class="filled-in" id="filled-in-box2" name="googfavicon" checked="checked"/>
+      <label for="filled-in-box2" class="blue-grey-text text-darken-4">Google API から Favicon 画像を取得</label>
     </p>
     <p>
-      <input type="checkbox" class="filled-in" id="filled-in-box2" name="googfavicon"/>
-      <label for="filled-in-box2" class="blue-grey-text text-darken-4">Google API から Favicon 画像を取得</label>
+      <input type="checkbox" class="filled-in" id="filled-in-box" name="ogpthumbnail"/>
+      <label for="filled-in-box" class="blue-grey-text text-darken-4">アイキャッチ画像を取得</label>
     </p>
   </form>
 
@@ -251,7 +251,7 @@ position: absolute;
 
 <h5 style="font-size:18px; font-weight:600;">参考サイト</h5>
 
-<div class='bcard-wrapper'><span class='bcard-header withgfav'><span class="bcard-favicon" style="background-image: url(https://www.google.com/s2/favicons?domain=http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92);width:16px;height:16px;"></span><div class='bcard-site'><a href='http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92' rel='nofollow' target='_blank'>blazechariot -Xdomain-</a></div><div class='bcard-url'><a href='http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92' rel='nofollow' target='_blank'>http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92</a></div></span><span class='bcard-main'><div class='bcard-title'><a href='http://blazechariot.wp.xdomain.jp/simplicity%e3%82%92%e5%b0%91%e3%81%97%e6%94%b9%e9%80%a0%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f-%e7%95%aa%e5%a4%96%e7%b7%a8part18-%e5%a4%96%e9%83%a8%e3%82%b5%e3%82%a4%e3%83%88%e3%81%aeogp%e3%82%92' rel='nofollow' target='_blank'>Simplicityを少し改造してみた 番外編part18 外部サイトのogpを取得してブログカードを作る</a></div><div class='bcard-description'>外部サイトのブログカードのスタイルが現在ははてブのapiを利用しているため、スタイルができないと言う事がありましたので、色々やってみました。 外部サイトのogpが読めれば、後は整形して出力なので色々とできる可能性は広がります。 ここの元の内容はSimplicity公式のフォーラムに投稿したものです。 比較的簡単なので、問題的にはセキュリティをどうするかのみかと思います。比較的簡単と言えど、それなりに関係性を把握しないとアレなので初心者向けではないかも知れません。 必要なもの OpenGraph.php https://github.com/scottmac/opengraph/blob/master/OpenGraph.php Apache Licenseです。 前準備 子テーマでテストをしたので子テーマのlibディレクトリにopengraph.phpと、ajaxでデータをやり取りするためのch_blogcard.php(名前は適当)を設置。 ch_blogcard.php  これはjQueryのajaxでこのファイルに対して通信して、データをjson出力するためのものです。またテストなのでセキュリティ的なものは考慮してませんのでご了承下さい。 子テーマlibディレクトリにopengraph.phpがある場合は上記のまま。別途ディレクトリを変える場合は、require_onceと以下のajaxでのアドレスが要変更。 jQueryのajaxでデータを取得して表示するためのスクリプト(子テーマjavascript.js)  使い方 記事編集画面で、  として外部のogpが設置してあるサイトのアドレスを入れる。複数設置してもok(複数の.exBlogと言う意味)。 出力されるhtml  これら構造・class名はjQueryで変更可能。 このサムネイルのようにして出力されます。後はこれに合わせてcssでスタイルするだけ。 画像上に表示されているのは、Xdomainの自サイト記事のデータ(このサイトの記事のogpから出力したもの)、下はSimplicity公式の記事ページです。表示自体はcloud9のテストページです。 ajaxで処理しているので、色々とすることも可能ですが、現状は非同期で読み込むだけです。 例えば、functions</div></span></div>
+<div class="bcard-wrapper"><span class="bcard-header withgfav"><div class="bcard-favicon" style="background-image: url(https://www.google.com/s2/favicons?domain=https://web.archive.org/web/20200811185127/http://blazechariot.wp.xdomain.jp/simplicityを少し改造してみた-番外編part18-外部サイトのogpを)"></div><div class="bcard-site"><a href="https://web.archive.org/web/20200811185127/http://blazechariot.wp.xdomain.jp/simplicityを少し改造してみた-番外編part18-外部サイトのogpを" rel="nofollow" target="_blank">blazechariot -Xdomain-</a></div><div class="bcard-url"><a href="https://web.archive.org/web/20200811185127/http://blazechariot.wp.xdomain.jp/simplicityを少し改造してみた-番外編part18-外部サイトのogpを" rel="nofollow" target="_blank">https://web.archive.org/web/20200811185127/http://blazechariot.wp.xdomain.jp/simplicityを少し改造してみた-番外編part18-外部サイトのogpを</a></div></span><span class="bcard-main"><div class="bcard-title"><a href="https://web.archive.org/web/20200811185127/http://blazechariot.wp.xdomain.jp/simplicityを少し改造してみた-番外編part18-外部サイトのogpを" rel="nofollow" target="_blank">Simplicityを少し改造してみた 番外編part18 外部サイトのogpを取得してブログカードを作る | blazechariot -Xdomain-</a></div><div class="bcard-description">外部サイトのブログカードのスタイルが現在ははてブのapiを利用しているため、スタイルができないと言う事がありましたので、色々やってみました。 外部サイトのogpが読めれば、後は整形して出力なので色々とできる可能性は広がります。 ここの元の内容はSimplicity公式のフォーラムに投稿したものです。</div></span></div>
 <div class='bcard-wrapper'><span class='bcard-header withgfav'><span class="bcard-favicon" style="background-image: url(https://www.google.com/s2/favicons?domain=http://kimagureneet.hatenablog.com/entry/2016/07/15/233903);width:16px;height:16px;"></span><div class='bcard-site'><a href='http://kimagureneet.hatenablog.com/entry/2016/07/15/233903' rel='nofollow' target='_blank'>とりあえずphpとか</a></div><div class='bcard-url'><a href='http://kimagureneet.hatenablog.com/entry/2016/07/15/233903' rel='nofollow' target='_blank'>http://kimagureneet.hatenablog.com/entry/2016/07/15/233903</a></div></span><span class='bcard-main'><div class='bcard-title'><a href='http://kimagureneet.hatenablog.com/entry/2016/07/15/233903' rel='nofollow' target='_blank'>OpenGraph.phpの文字化け対応する方法メモ - とりあえずphpとか</a></div><div class='bcard-description'>https://github.com/scottmac/opengraph こちらを使ってogpを解析しようとしたら文字化けしたので対応方法をメモ</div></span></div>
 
 
@@ -566,6 +566,19 @@ border-radius:0;
 </li>
 
 
+<li style="padding: 0 !important;">
+<div class="item-content">
+<div class="item-title" style="padding-bottom: 0 !important;"><a class="collection-item" target="_blank" href="http://io.cottpic.com/coinz/" style="min-height:70px; padding-left:72px; position:relative; border-bottom: 1px solid #e0e0e0;">
+<div class="item-thumbnail" style="position: absolute; top: 15px; left: 15px;">
+<img alt="" border="0" src="http://io.cottpic.com/coinz/css/logos/bitcoin-btc-logo.svg" style="width: 42px; height: 42px; padding-right: 0 !important;">
+</div>
+<div class="title">GMOコイン 販売所価格 早見表</div>
+<div class="item-snippet truncate">
+</div>
+</a></div>
+</div>
+<div style="clear: both;"></div>
+</li>
 
 
 

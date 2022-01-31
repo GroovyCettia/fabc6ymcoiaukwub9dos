@@ -1,17 +1,12 @@
 h1 ,h3 {padding-left:.5em}  h1{font-size: 30px;}
-@media screen and (min-width: 481px) {}
-@media screen and (min-width: 960px) {
-    #container { 
-   margin: 0 auto;
-   width: 80%;
-   display: flex;
-   justify-content: space-between;}
-   #ncontainer {width:calc(100%-600px);}
-}
+
 
   #news  {max-height: 400px; overflow: scroll; overflow-x: hidden;}
  #tcontainer table {overflow: scroll; overflow-y: hidden;}
-#backtohome {text-align : center; font-weight:bold;}
+#backtohome {text-align : center; font-weight:bold; margin:20px 0;}
+
+#container {width: 100%;    display: block;}
+#tcontainer {max-width:100%;}
 #ncontainer {width:100%;}
 
 a {color: #00e3ee; text-decoration:none;}
@@ -38,3 +33,20 @@ body {background-color: #001717;color: white;}
 #pid1013 th{  background-image: url(logos/polkadot-new-dot-logo.svg);}
 #pid1014 th{  background-image: url(logos/cosmos-atom-logo.svg);}
 #pid1020 th{  background-image: url(logos/cardano-ada-logo.svg);}
+
+.adsbygoogle {display:block; max-width:400px; margin: 20px auto;}
+
+@media screen and (min-width: 481px) {}
+@media screen and (min-width: 1000px) {
+
+    #container { 
+   width: 100%;
+   display: flex;
+   justify-content: center;}
+   
+   #tcontainer { max-width: 600px; flex: 1;}
+   #ncontainer {width: 400px;}
+   
+   .adsbygoogle { margin-top: 80px;}
+   
+}

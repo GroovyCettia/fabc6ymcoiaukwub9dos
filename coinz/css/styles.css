@@ -38,9 +38,10 @@ body {background-color: #001717;color: white;}
 #pid1012 th{  background-image: url(logos/enjin-coin-enj-logo.svg);}
 #pid1013 th{  background-image: url(logos/polkadot-new-dot-logo.svg);}
 #pid1014 th{  background-image: url(logos/cosmos-atom-logo.svg);}
-#pid1020 th{  background-image: url(logos/cardano-ada-logo.svg);}
 #pid1015 th{  background-image: url(logos/maker-mkr-logo.svg);}
 #pid1016 th{  background-image: url(logos/multi-collateral-dai-dai-logo.svg);}
+#pid1020 th{  background-image: url(logos/cardano-ada-logo.svg);}
+#pid1021 th{  background-image: url(logos/chainlink-link-logo.svg);}
 
 .adsbygoogle {display:block; max-width:400px; margin: 20px auto;}
 

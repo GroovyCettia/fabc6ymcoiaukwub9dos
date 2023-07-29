@@ -44,6 +44,9 @@ body {background-color: #001717;color: white;}
 #pid1021 th{  background-image: url(logos/chainlink-link-logo.svg);}
 #pid1022 th{  background-image: url(logos/dogecoin-doge-logo.svg);}
 #pid1023 th{  background-image: url(logos/solana-sol-logo.svg);}
+#pid1026 th{  background-image: url(logos/filecoin-fil-logo.svg);}
+#pid1027 th{  background-image: url(logos/the-sandbox-sand-logo.svg);}
+#pid1028 th{  background-image: url(logos/chiliz-chz-logo.svg);}
 
 .adsbygoogle {display:block; max-width:400px; margin: 20px auto;}
 

@@ -290,7 +290,8 @@ $("#preloadersw").toggleClass("invisible");
       var def = $.Deferred();
       $.ajax({
         type: "GET",
-        url: "http://cottpics.php.xdomain.jp/3AJwQ6bfVs/bblogcard.php",
+        // url: "http://cottpics.php.xdomain.jp/3AJwQ6bfVs/bblogcard.php",
+        url: "https://apricott.cloudfree.jp/php/bblogcard.php",
         data: {"url": url},
         dataType: "json",
         success: def.resolve,

@@ -116,7 +116,7 @@ $(function() {
 	
 	function getmaster(){
 	
-		$.getJSON("http://cottpics.php.xdomain.jp/3AJwQ6bfVs/getmaster.php", function(data){
+		$.getJSON("https://apricott.cloudfree.jp/php/getmaster.php", function(data){
 			
 			var dind = data.data
 			
@@ -165,7 +165,8 @@ $(function() {
 	
 	
     $.ajax({
-        url: 'http://cottpics.php.xdomain.jp/3AJwQ6bfVs/getnews.php',
+        // url: 'http://cottpics.php.xdomain.jp/3AJwQ6bfVs/getnews.php',
+	url: 'https://apricott.cloudfree.jp/php/getnews.php',
         type: 'GET',
         dataType: 'html',
     })

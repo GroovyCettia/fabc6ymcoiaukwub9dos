@@ -91,7 +91,6 @@ $(function() {
 						['BAT',1008],
 						['XTZ',1010],
 						['QTUM',1011],
-						['ENJ',1012],
 						['DOT',1013],
 						['ATOM',1014],
 						['MKR',1015],
@@ -164,6 +163,51 @@ $(function() {
 	},600000);
 	
 	
+	function getnews(){
+	
+		$.getJSON("https://apricott.cloudfree.jp/php/getjson.php?url=https://coin.z.com/jp/news/article-list.json", function(data){		
+			let dnews = data
+			let narr = [];
+			
+			
+			
+			/*
+			let ndate, ntitle, nurl = [];
+			for(var j in dnews){
+				for(var k in dnews[j]){
+					ndate.push(dnews[j][k].datetime);
+					ntitle.push(dnews[j][k].title);
+					ntitle.push(dnews[j][k].url);
+					console.log(ndate);
+				}
+			}
+			*/
+			
+			for(var j in dnews){
+				for(var k in dnews[j]){
+					narr.push(dnews[j][k])
+				}
+			}
+			
+			narr.sort((a,b)=>{
+				return a.number - b.number
+			})
+			console.log(narr);
+			
+			let newshead = "<h3>News from GMOコイン</h3>"
+			$("#nwrap").append(newshead);
+			$("#news").append("<ul></ul>");
+			for(var l in narr){
+				let newsitem  = "<li><p>" + narr[l].datetime + "<br/><a target='_blank' href='" + narr[l].url + "'>" + narr[l].title + "</a></p></li>";
+				$("#news ul").append(newsitem);
+			}
+			
+		});
+	}
+	getnews();
+	
+	
+	/*
     $.ajax({
         // url: 'http://cottpics.php.xdomain.jp/3AJwQ6bfVs/getnews.php',
 	url: 'https://apricott.cloudfree.jp/php/getnews.php',
@@ -184,7 +228,7 @@ $(function() {
     .fail(function( data ) {
         // ...
     });
-	
+	*/
 
 	(adsbygoogle = window.adsbygoogle || []).push({});
 

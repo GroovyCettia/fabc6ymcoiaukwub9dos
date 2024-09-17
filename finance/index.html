@@ -127,12 +127,12 @@ $(function() {
 						}else if (darr[i].Type == "SBI_fund"){
 							let fndarr = $(data).find('.baseCurrency-fund01-content-inner div.bold');
 							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ darr[i].Label + "</a></th><td>" + $(fndarr[0]).text() +"</td><td></td><td></td><td></td></tr>");
-							console.log(fndarr);
+							//console.log(fndarr);
 						}else{
 							let slbl = $(data).find('.zzDege').text();
 							let sprc = $(data).find('.YMlKec' + '.fxKbKc').text();
-							console.log(slbl);
-							console.log(sprc);
+							//console.log(slbl);
+							//console.log(sprc);
 							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ slbl + "</a></th><td>" + sprc +"</td><td></td><td></td><td></td></tr>");
 						}
 					})
@@ -169,7 +169,7 @@ $(function() {
 				nkarr[k].link = "https://www.google.com/finance/quote/" + nkarr[k].stock.replace(/\s+/g, "").slice(-8,-4) + ":TYO";
 				nkarr[k].label = nkarr[k].stock.replace(/\s+/g, "").slice(-50, -9) + " (" + nkarr[k].rate.replace(/\s+/g, "").slice(-6) + ")"
 				apphtml += "<li><b><a target='_blank' href='" + nkarr[k].link + "'>" + nkarr[k].label + "</a>　" + nkarr[k].buy + "</b></li>"
-				console.log(nkarr[k].stock.replace(/\s+/g, ""));
+				//console.log(nkarr[k].stock.replace(/\s+/g, ""));
 			}
 			let newshead = "<h3>日経225銘柄 from TRADER'S WEB</h3>"
 			$("#news").before(newshead);
@@ -213,7 +213,7 @@ $(function() {
 			$("#news2").before(newshead2);
 			$("#news2").append("<ul></ul>");
 			$("#news2 ul").append(apphtml2);
-			console.log($(data).find('.table-sm td'));
+			// console.log($(data).find('.table-sm td'));
 		})
 		.fail(function( data ) {
 			// ...

@@ -1,0 +1,68 @@
+h1 ,h3 {padding-left:.5em}  h1{font-size: 30px;}
+p {word-wrap: break-word;}
+
+#twrap  {
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+  #news, #news2  {max-height: 400px; overflow: scroll; overflow-x: hidden;}
+ #tcontainer table {overflow: scroll; overflow-y: hidden;}
+#backhome {text-align : center; font-weight:bold; margin:20px 0;}
+
+#container {width: 100%; display: block; overflow: hidden;}
+#tcontainer {max-width:100%;}
+#ncontainer {width:100%;}
+
+a {color: #00e3ee; text-decoration:none;}
+
+table{width: 600px; text-align: center; font-weight: bold;}
+tbody th{padding: 0 0 0 40px;
+  background-repeat: no-repeat;
+  background-position: 10px 5px; background-size: 30px 30px;}
+th {background-color: #152426;} 
+tr {height:40px}
+body {background-color: #001717;color: white;}
+#pid1001 th{  background-image: url(logos/bitcoin-btc-logo.svg);}
+#pid1002 th{  background-image: url(logos/ethereum-eth-logo.svg);}
+#pid1003 th{  background-image: url(logos/bitcoin-cash-bch-logo.svg);}
+#pid1004 th{  background-image: url(logos/litecoin-ltc-logo.svg);}
+#pid1005 th{  background-image: url(logos/xrp-xrp-logo.svg);}
+#pid1006 th{  background-image: url(logos/nem-xem-logo.svg);}
+#pid1007 th{  background-image: url(logos/stellar-xlm-logo.svg);}
+#pid1008 th{  background-image: url(logos/basic-attention-token-bat-logo.svg);}
+#pid1009 th{  background-image: url(logos/omg-omg-logo.svg);}
+#pid1010 th{  background-image: url(logos/tezos-xtz-logo.svg);}
+#pid1011 th{  background-image: url(logos/qtum-qtum-logo.svg);}
+#pid1012 th{  background-image: url(logos/enjin-coin-enj-logo.svg);}
+#pid1013 th{  background-image: url(logos/polkadot-new-dot-logo.svg);}
+#pid1014 th{  background-image: url(logos/cosmos-atom-logo.svg);}
+#pid1015 th{  background-image: url(logos/maker-mkr-logo.svg);}
+#pid1016 th{  background-image: url(logos/multi-collateral-dai-dai-logo.svg);}
+#pid1020 th{  background-image: url(logos/cardano-ada-logo.svg);}
+#pid1021 th{  background-image: url(logos/chainlink-link-logo.svg);}
+#pid1022 th{  background-image: url(logos/dogecoin-doge-logo.svg);}
+#pid1023 th{  background-image: url(logos/solana-sol-logo.svg);}
+#pid1026 th{  background-image: url(logos/filecoin-fil-logo.svg);}
+#pid1027 th{  background-image: url(logos/the-sandbox-sand-logo.svg);}
+#pid1028 th{  background-image: url(logos/chiliz-chz-logo.svg);}
+
+.adsbygoogle {display:block; max-width:400px; margin: 20px auto;}
+
+@media screen and (min-width: 481px) {}
+@media screen and (min-width: 1000px) {
+
+    #container { 
+   width: 100%;
+   display: flex;
+   justify-content: center;}
+   
+   #tcontainer { max-width: 600px; flex: 1;}
+   #ncontainer {width: 400px;}
+   
+    #twrap {overflow-x: hidden;}
+    
+   .adsbygoogle { margin-top: 80px;}
+   
+}

@@ -20,7 +20,7 @@
 	<meta content='Finance Cheat Sheet - Cottpic' name='twitter:title'/>
 	
 	<link href='https://io.cottpic.com/finance/' rel='canonical'/>
-  <link rel="icon" href="favicon.ico" type='image/x-icon'/>
+  <link rel="icon" href="./favicon.ico" type='image/x-icon'/>
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -82,68 +82,6 @@
 <script type="text/javascript">
 $(function() {
 
-	/*
-	let coins =[ 
-						['BTC',1001]
-				];
-	
-	for (let i in coins) {
-		
-		$("tbody").append("<tr id='pid" + coins[i][1] +"'><th>"+ coins[i][0] +
-										"</th><td></td><td></td><td></td><td></td></tr>");
-	}
-	*/
-	
-	function getmaster(){
-	
-		$.getJSON("https://apricott.cloudfree.jp/php/getmaster.php", function(data){
-			
-			var dind = data.data
-			
-			for(var i in dind){
-			
-			var pid = dind[i].productId;
-			var arr = [dind[i].bid, dind[i].ask, dind[i].highRate, dind[i].lowRate];
-			
-			//$("#pid" +pid+ " td").eq(2).html(dind[i].bid);
-			
-			/*
-			$("#pid" +pid+ " td").each(function() {
-				//$(this).eq(0).html(dind[i].bid);
-				//$(this).eq(1).html(dind[i].ask);
-				//$(this).eq(2).html(dind[i].highRate);
-				$(this).eq(3).html(dind[i].lowRate);
-				console.log(dind[i].bid);
-				console.log(dind[i].ask);
-				console.log(dind[i].lowRate);
-			});
-			*/
-
-			
-			$("#pid" +pid+ " td").each(function() {
-				var indx= $(this).index() -1;
-				$("#pid" +pid+ " td").eq(indx).html(arr[indx]);
-				/*
-					console.log($("#pid" +pid+ " td"));
-					console.log($(this));
-					console.log($(this).index());
-				*/
-			});
-			
-			
-			//$("#OK").append("<li><strong>" + data[i] + "</strong></li>");
-			//$("#OK").append("<li><strong>" + (JSON.stringify(data[i])) + i  + "</strong></li>");
-			}
-		});
-	}
-	
-	getmaster();
-	
-	setInterval(function(){
-		getmaster();
-	},600000);
-	
-	
 	function getnews(){
 		
 		$.ajax({
@@ -218,60 +156,9 @@ $(function() {
 			// ...
 		});
 		
-		
-		/*
-		$.getJSON("https://apricott.cloudfree.jp/php/getjson.php?url=https://coin.z.com/jp/news/article-list.json", function(data){		
-			let dnews = data
-			let narr = [];
-			
-			
-			
-			//
-			let ndate, ntitle, nurl = [];
-			for(var j in dnews){
-				for(var k in dnews[j]){
-					ndate.push(dnews[j][k].datetime);
-					ntitle.push(dnews[j][k].title);
-					ntitle.push(dnews[j][k].url);
-					console.log(ndate);
-				}
-			}
-			//
-			
-			for(var j in dnews){
-				for(var k in dnews[j]){
-					narr.push(dnews[j][k])
-				}
-			}
-			
-			narr.sort((a,b)=>{
-				return a.number - b.number
-			})
-			console.log(narr);
-			
-			let newshead = "<h3>News from GMOコイン</h3>"
-			$("#nwrap").append(newshead);
-			$("#news").append("<ul></ul>");
-			for(var l in narr){
-				let newsitem  = "<li><p>" + narr[l].datetime + "<br/><a target='_blank' href='" + narr[l].url + "'>" + narr[l].title + "</a></p></li>";
-				$("#news ul").append(newsitem);
-			}
-			
-		});
-		*/
 	}
 	getnews();
 	
-
-	/*
-	// URLのクエリ文字列を取得
-	const queryString = window.location.search;
-	// URLSearchParamsオブジェクトを作成してクエリ文字列を解析
-	const params = new URLSearchParams(queryString);
-	// 特定のパラメータの値を取得
-	const paramValue = params.get('url');
-	console.log(paramValue);
-	*/
 
 	function getprices(){
 		$.getJSON('https://apricott.cloudfree.jp/alpha/list.json', async function(data){
@@ -293,15 +180,15 @@ $(function() {
 							let mbarr = [
 								{
 									"label":  "Gold",
-									"logo":  "https://apricott.cloudfree.jp/alpha/img/gold_from_flaticon.com_packs_jewelry-128.png"
+									"logo":  "./img/gold_from_flaticon.com_packs_jewelry-128.png"
 								},
 								{
 									"label":  "Platinum",
-									"logo":  "https://apricott.cloudfree.jp/alpha/img/platinum_from_flaticon.com_packs_jewelry-128.png"
+									"logo":  "./img/platinum_from_flaticon.com_packs_jewelry-128.png"
 								},
 								{
 									"label":  "Silver",
-									"logo":  "https://apricott.cloudfree.jp/alpha/img/silver_from_flaticon.com_packs_jewelry-128.png"
+									"logo":  "./img/silver_from_flaticon.com_packs_jewelry-128.png"
 								}
 							];
 							let mbtrgarr = $(data).find('.vaM + .alR');

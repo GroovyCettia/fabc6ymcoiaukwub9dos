@@ -1,0 +1,348 @@
+<!doctype html>
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Finance Cheat Sheet - Cottpic</title>
+  <meta name="description" content="各種サイトからチャートを取得して表示します。">
+
+  <meta property="og:title" content="Finance Cheat Sheet - Cottpic">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://io.cottpic.com/finance/">
+  <meta property="og:site_name" content="Cottpic"/>
+  <meta property="og:description" content="各種サイトからチャートを取得して表示します。">
+  <meta property="og:image" content="https://io.cottpic.com/finance/image.png">
+	<meta content='summary_large_image' name='twitter:card'/>
+	<meta content='https://www.cottpic.com/' name='twitter:domain'/>
+	<meta content='https://io.cottpic.com/finance/' name='twitter:url'/>
+	<meta content='Finance Cheat Sheet - Cottpic' name='twitter:title'/>
+	
+	<link href='https://io.cottpic.com/finance/' rel='canonical'/>
+  <link rel="icon" href="favicon.ico" type='image/x-icon'/>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-9888698185025568",
+          enable_page_level_ads: true
+     });
+</script>
+
+</head>
+
+<body>
+  <!-- your content here... -->
+
+
+<div id="container">
+
+<div id="tcontainer">
+<h1>Cottpic Finance Cheat Sheet</h1>
+<div id="twrap"><table>
+            <thead class="">
+              <tr class="">
+                <th class="" style="padding: 0 0 0 40px;">銘柄</th>
+                <th class="">BID（売）</th>
+                <th class="">ASK（買）</th>
+                <th class=""></th>
+                <th class=""></th>
+              </tr>
+            </thead>
+			
+	<tbody>
+
+	</tbody>
+</table></div>
+<p><b>※このページでは各種チャート掲載サイトから取得したデータを表示しています。実際の価格とは異なる可能性がありますのでご注意ください。</b></p>
+</div>
+
+
+	
+<div id="ncontainer">
+
+	<!-- cottpics_main_Blog2_1x1_as -->
+	<ins class="adsbygoogle" data-ad-client="ca-pub-9888698185025568" data-ad-format="rectangle" data-ad-slot="6895751819" data-full-width-responsive="false"></ins>
+
+<div id="nwrap"></div>
+	<div id="news2"></div>
+	<div id="news"></div>
+</div>
+
+
+</div>
+
+<footer><div id="backhome"><a href="https://www.cottpic.com/">BACK HOME</a></div></footer>
+
+
+
+<script type="text/javascript">
+$(function() {
+
+	/*
+	let coins =[ 
+						['BTC',1001]
+				];
+	
+	for (let i in coins) {
+		
+		$("tbody").append("<tr id='pid" + coins[i][1] +"'><th>"+ coins[i][0] +
+										"</th><td></td><td></td><td></td><td></td></tr>");
+	}
+	*/
+	
+	function getmaster(){
+	
+		$.getJSON("https://apricott.cloudfree.jp/php/getmaster.php", function(data){
+			
+			var dind = data.data
+			
+			for(var i in dind){
+			
+			var pid = dind[i].productId;
+			var arr = [dind[i].bid, dind[i].ask, dind[i].highRate, dind[i].lowRate];
+			
+			//$("#pid" +pid+ " td").eq(2).html(dind[i].bid);
+			
+			/*
+			$("#pid" +pid+ " td").each(function() {
+				//$(this).eq(0).html(dind[i].bid);
+				//$(this).eq(1).html(dind[i].ask);
+				//$(this).eq(2).html(dind[i].highRate);
+				$(this).eq(3).html(dind[i].lowRate);
+				console.log(dind[i].bid);
+				console.log(dind[i].ask);
+				console.log(dind[i].lowRate);
+			});
+			*/
+
+			
+			$("#pid" +pid+ " td").each(function() {
+				var indx= $(this).index() -1;
+				$("#pid" +pid+ " td").eq(indx).html(arr[indx]);
+				/*
+					console.log($("#pid" +pid+ " td"));
+					console.log($(this));
+					console.log($(this).index());
+				*/
+			});
+			
+			
+			//$("#OK").append("<li><strong>" + data[i] + "</strong></li>");
+			//$("#OK").append("<li><strong>" + (JSON.stringify(data[i])) + i  + "</strong></li>");
+			}
+		});
+	}
+	
+	getmaster();
+	
+	setInterval(function(){
+		getmaster();
+	},600000);
+	
+	
+	function getnews(){
+		
+		$.ajax({
+			url: 'https://apricott.cloudfree.jp/php/getpage.php?url=https://www.traders.co.jp/market_jp/nikkei225',
+			type: 'GET',
+			dataType: 'html',
+		})
+		.done(function(data) {
+			let nkarr =[];
+			let apphtml="";
+			let trgarr = $(data).find('table.data_table td');
+			for (let k = 0; k<225; k++){
+				nkarr[k] ={};
+				/*
+				nkarr[k].stock = $(data).find('table.data_table td:eq(' + 5*k +') ').text(); 
+				nkarr[k].buy = $(data).find('table.data_table td:eq(' + (5*k+2) +')').text();
+				nkarr[k].rate = $(data).find('table.data_table td:eq(' + (5*k+3) +')').text();
+				*/
+				nkarr[k].stock = $(trgarr[5*k]).text();
+				nkarr[k].buy = $(trgarr[5*k+2]).text();
+				nkarr[k].rate = $(trgarr[5*k+3]).text();
+				nkarr[k].link = "https://www.google.com/finance/quote/" + nkarr[k].stock.replace(/\s+/g, "").slice(-8,-4) + ":TYO";
+				nkarr[k].label = nkarr[k].stock.replace(/\s+/g, "").slice(-50, -9) + " (" + nkarr[k].rate.replace(/\s+/g, "").slice(-6) + ")"
+				apphtml += "<li><b><a target='_blank' href='" + nkarr[k].link + "'>" + nkarr[k].label + "</a>　" + nkarr[k].buy + "</b></li>"
+				console.log(nkarr[k].stock.replace(/\s+/g, ""));
+			}
+			let newshead = "<h3>日経225銘柄 from TRADER'S WEB</h3>"
+			$("#news").before(newshead);
+			$("#news").append("<ul></ul>");
+			$("#news ul").append(apphtml);
+		})
+		.fail(function( data ) {
+			// ...
+		});
+		
+		
+		
+		$.ajax({
+			url: 'https://apricott.cloudfree.jp/php/getpage.php?url=https://www.slickcharts.com/sp500',
+			type: 'GET',
+			dataType: 'html',
+		})
+		.done(function(data) {
+			let sparr =[];
+			let apphtml2="";
+			let trgarr2 = $(data).find('table.table td')
+			for (let m = 0; m<500; m++){
+				sparr[m] ={};
+				/*
+				sparr[m].stock = $(data).find('table.table td:eq(' + (7*m+1) +') ').text(); 
+				sparr[m].buy = $(data).find('table.table td:eq(' + (7*m+4) +') ').text();
+				sparr[m].symbol = $(data).find('table.table td:eq(' + (7*m+2) +') ').text();
+				sparr[m].rate = $(data).find('table.table td:eq(' + (7*m+6) +') ').text();
+				*/
+				sparr[m].stock = $(trgarr2[7*m+1]).text();
+				sparr[m].buy = $(trgarr2[7*m+4]).text();
+				sparr[m].symbol = $(trgarr2[7*m+2]).text();
+				sparr[m].rate = $(trgarr2[7*m+6]).text();
+				sparr[m].link = "https://www.google.com/finance/quote/" + sparr[m].symbol.replace(/\s+/g, "");
+				if (sparr[m].symbol.replace(/\s+/g, "").length >= 4){ sparr[m].link += ":NASDAQ" } else { sparr[m].link += ":NYSE" }
+				sparr[m].label = sparr[m].stock + " " + sparr[m].rate; 
+				apphtml2 += "<li><b><a target='_blank' href='" + sparr[m].link + "'>" + sparr[m].label + "</a><br/>" + sparr[m].buy + "</b></li>"
+				//console.log(sparr[m]);
+			}
+			let newshead2 = "<h3>S&amp;P500 Components from Slickcharts</h3>"
+			$("#news2").before(newshead2);
+			$("#news2").append("<ul></ul>");
+			$("#news2 ul").append(apphtml2);
+			console.log($(data).find('.table-sm td'));
+		})
+		.fail(function( data ) {
+			// ...
+		});
+		
+		
+		/*
+		$.getJSON("https://apricott.cloudfree.jp/php/getjson.php?url=https://coin.z.com/jp/news/article-list.json", function(data){		
+			let dnews = data
+			let narr = [];
+			
+			
+			
+			//
+			let ndate, ntitle, nurl = [];
+			for(var j in dnews){
+				for(var k in dnews[j]){
+					ndate.push(dnews[j][k].datetime);
+					ntitle.push(dnews[j][k].title);
+					ntitle.push(dnews[j][k].url);
+					console.log(ndate);
+				}
+			}
+			//
+			
+			for(var j in dnews){
+				for(var k in dnews[j]){
+					narr.push(dnews[j][k])
+				}
+			}
+			
+			narr.sort((a,b)=>{
+				return a.number - b.number
+			})
+			console.log(narr);
+			
+			let newshead = "<h3>News from GMOコイン</h3>"
+			$("#nwrap").append(newshead);
+			$("#news").append("<ul></ul>");
+			for(var l in narr){
+				let newsitem  = "<li><p>" + narr[l].datetime + "<br/><a target='_blank' href='" + narr[l].url + "'>" + narr[l].title + "</a></p></li>";
+				$("#news ul").append(newsitem);
+			}
+			
+		});
+		*/
+	}
+	getnews();
+	
+
+	/*
+	// URLのクエリ文字列を取得
+	const queryString = window.location.search;
+	// URLSearchParamsオブジェクトを作成してクエリ文字列を解析
+	const params = new URLSearchParams(queryString);
+	// 特定のパラメータの値を取得
+	const paramValue = params.get('url');
+	console.log(paramValue);
+	*/
+
+	function getprices(){
+		$.getJSON('https://apricott.cloudfree.jp/alpha/list.json', async function(data){
+			let darr = data
+			let pgurl = ""
+				for (let i in darr) {
+					if(darr[i].Type == "SBI_gbi" || darr[i].Type == "SBI_fund") {
+						pgurl = 'https://apricott.cloudfree.jp/php/getpage-jis.php';
+					}else {
+						pgurl= 'https://apricott.cloudfree.jp/php/getpage.php';
+					}
+					await $.ajax({
+						url: pgurl + '?url=' + darr[i].URL,
+						type: 'GET',
+						dataType: 'html',
+					})
+					.done(function(data) {
+						if (darr[i].Type == "SBI_gbi"){
+							let mbarr = [
+								{
+									"label":  "Gold",
+									"logo":  "https://apricott.cloudfree.jp/alpha/img/gold_from_flaticon.com_packs_jewelry-128.png"
+								},
+								{
+									"label":  "Platinum",
+									"logo":  "https://apricott.cloudfree.jp/alpha/img/platinum_from_flaticon.com_packs_jewelry-128.png"
+								},
+								{
+									"label":  "Silver",
+									"logo":  "https://apricott.cloudfree.jp/alpha/img/silver_from_flaticon.com_packs_jewelry-128.png"
+								}
+							];
+							let mbtrgarr = $(data).find('.vaM + .alR');
+							for (let j = 0; j<3; j++){
+								/*
+								mbarr[j].bid = $(data).find('.alR:eq(' + (4*j+2) +')').text();
+								mbarr[j].buy = $(data).find('.alR:eq(' + (4*j) +')').text();
+								*/
+								mbarr[j].bid = $(mbtrgarr[4*j+2]).text();
+								mbarr[j].buy = $(mbtrgarr[4*j]).text();
+								$("tbody").append("<tr><th style='background-image: url(" + mbarr[j].logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ mbarr[j].label + "</a></th><td>" + mbarr[j].bid +"</td><td>" + mbarr[j].buy + "</td><td></td><td></td></tr>");
+							}
+							//console.log($(data).find('.alR'));
+						}else if (darr[i].Type == "SBI_fund"){
+							let fndarr = $(data).find('.baseCurrency-fund01-content-inner div.bold');
+							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ darr[i].Label + "</a></th><td>" + $(fndarr[0]).text() +"</td><td></td><td></td><td></td></tr>");
+							console.log(fndarr);
+						}else{
+							let slbl = $(data).find('.zzDege').text();
+							let sprc = $(data).find('.YMlKec' + '.fxKbKc').text();
+							console.log(slbl);
+							console.log(sprc);
+							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ slbl + "</a></th><td>" + sprc +"</td><td></td><td></td><td></td></tr>");
+						}
+					})
+					.fail(function( data ) {
+						// ...
+					});
+				}
+		});
+	}
+	getprices();
+
+
+});
+	
+</script>
+
+</body>
+
+<script>
+</script>
+
+</html>

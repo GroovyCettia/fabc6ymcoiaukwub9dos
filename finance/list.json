@@ -1,0 +1,58 @@
+[
+  {
+    "Label": "SBI_gbi",
+    "Logo": "",
+    "Note": "",
+    "Type": "SBI_gbi",
+    "URL": "https://site0.sbisec.co.jp/marble/gbi/top.do?"
+  },
+  {
+    "Label": "三菱UFJ-eMAXIS S&P500",
+    "Logo": "",
+    "Note": "",
+    "Type": "SBI_fund",
+    "URL": "https://site0.sbisec.co.jp/marble/fund/detail/achievement.do?Param6=203311187"
+  },
+  {
+    "Label": "三菱UFJ-eMAXIS オールカントリー",
+    "Logo": "",
+    "Note": "",
+    "Type": "SBI_fund",
+    "URL": "https://site0.sbisec.co.jp/marble/fund/detail/achievement.do?Param6=20331418A"
+  },
+  {
+    "Label": "三菱UFJ-eMAXIS 日経平均",
+    "Logo": "",
+    "Note": "",
+    "Type": "SBI_fund",
+    "URL": "https://site0.sbisec.co.jp/marble/fund/detail/achievement.do?Param6=203311182"
+  },
+  {
+    "Label": "三菱UFJ-eMAXIS TOPIX",
+    "Logo": "",
+    "Note": "",
+    "Type": "SBI_fund",
+    "URL": "https://site0.sbisec.co.jp/marble/fund/detail/achievement.do?Param6=203317172"
+  },
+  {
+    "Label": "Nintendo",
+    "Logo": "./img/nintendo.jpg",
+    "Note": "",
+    "Type": "Google",
+    "URL": "https://www.google.com/finance/quote/7974:TYO"
+  },
+  {
+    "Label": "CAPCOM",
+    "Logo": "https://cdn.worldvectorlogo.com/logos/capcom.svg",
+    "Note": "",
+    "Type": "Google",
+    "URL": "https://www.google.com/finance/quote/9697:TYO"
+  },
+  {
+    "Label": "バンダイナムコ",
+    "Logo": "https://res.cloudinary.com/givery-inc/image/upload/v1667273148/nlfmjntrcxfdhsmpyfqv.png",
+    "Note": "",
+    "Type": "Google",
+    "URL": "https://www.google.com/finance/quote/7832:TYO"
+  }
+]

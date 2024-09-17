@@ -81,7 +81,70 @@
 
 <script type="text/javascript">
 $(function() {
-
+	
+	function getprices(){
+		$.getJSON('./list.json', async function(data){
+			let darr = data
+			let pgurl = ""
+				for (let i in darr) {
+					if(darr[i].Type == "SBI_gbi" || darr[i].Type == "SBI_fund") {
+						pgurl = 'https://apricott.cloudfree.jp/php/getpage-jis.php';
+					}else {
+						pgurl= 'https://apricott.cloudfree.jp/php/getpage.php';
+					}
+					await $.ajax({
+						url: pgurl + '?url=' + darr[i].URL,
+						type: 'GET',
+						dataType: 'html',
+					})
+					.done(function(data) {
+						if (darr[i].Type == "SBI_gbi"){
+							let mbarr = [
+								{
+									"label":  "Gold",
+									"logo":  "./img/gold_from_flaticon.com_packs_jewelry-128.png"
+								},
+								{
+									"label":  "Platinum",
+									"logo":  "./img/platinum_from_flaticon.com_packs_jewelry-128.png"
+								},
+								{
+									"label":  "Silver",
+									"logo":  "./img/silver_from_flaticon.com_packs_jewelry-128.png"
+								}
+							];
+							let mbtrgarr = $(data).find('.vaM + .alR');
+							for (let j = 0; j<3; j++){
+								/*
+								mbarr[j].bid = $(data).find('.alR:eq(' + (4*j+2) +')').text();
+								mbarr[j].buy = $(data).find('.alR:eq(' + (4*j) +')').text();
+								*/
+								mbarr[j].bid = $(mbtrgarr[4*j+2]).text();
+								mbarr[j].buy = $(mbtrgarr[4*j]).text();
+								$("tbody").append("<tr><th style='background-image: url(" + mbarr[j].logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ mbarr[j].label + "</a></th><td>" + mbarr[j].bid +"</td><td>" + mbarr[j].buy + "</td><td></td><td></td></tr>");
+							}
+							//console.log($(data).find('.alR'));
+						}else if (darr[i].Type == "SBI_fund"){
+							let fndarr = $(data).find('.baseCurrency-fund01-content-inner div.bold');
+							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ darr[i].Label + "</a></th><td>" + $(fndarr[0]).text() +"</td><td></td><td></td><td></td></tr>");
+							console.log(fndarr);
+						}else{
+							let slbl = $(data).find('.zzDege').text();
+							let sprc = $(data).find('.YMlKec' + '.fxKbKc').text();
+							console.log(slbl);
+							console.log(sprc);
+							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ slbl + "</a></th><td>" + sprc +"</td><td></td><td></td><td></td></tr>");
+						}
+					})
+					.fail(function( data ) {
+						// ...
+					});
+				}
+		});
+	}
+	getprices();
+	
+	
 	function getnews(){
 		
 		$.ajax({
@@ -159,70 +222,6 @@ $(function() {
 	}
 	getnews();
 	
-
-	function getprices(){
-		$.getJSON('https://apricott.cloudfree.jp/alpha/list.json', async function(data){
-			let darr = data
-			let pgurl = ""
-				for (let i in darr) {
-					if(darr[i].Type == "SBI_gbi" || darr[i].Type == "SBI_fund") {
-						pgurl = 'https://apricott.cloudfree.jp/php/getpage-jis.php';
-					}else {
-						pgurl= 'https://apricott.cloudfree.jp/php/getpage.php';
-					}
-					await $.ajax({
-						url: pgurl + '?url=' + darr[i].URL,
-						type: 'GET',
-						dataType: 'html',
-					})
-					.done(function(data) {
-						if (darr[i].Type == "SBI_gbi"){
-							let mbarr = [
-								{
-									"label":  "Gold",
-									"logo":  "./img/gold_from_flaticon.com_packs_jewelry-128.png"
-								},
-								{
-									"label":  "Platinum",
-									"logo":  "./img/platinum_from_flaticon.com_packs_jewelry-128.png"
-								},
-								{
-									"label":  "Silver",
-									"logo":  "./img/silver_from_flaticon.com_packs_jewelry-128.png"
-								}
-							];
-							let mbtrgarr = $(data).find('.vaM + .alR');
-							for (let j = 0; j<3; j++){
-								/*
-								mbarr[j].bid = $(data).find('.alR:eq(' + (4*j+2) +')').text();
-								mbarr[j].buy = $(data).find('.alR:eq(' + (4*j) +')').text();
-								*/
-								mbarr[j].bid = $(mbtrgarr[4*j+2]).text();
-								mbarr[j].buy = $(mbtrgarr[4*j]).text();
-								$("tbody").append("<tr><th style='background-image: url(" + mbarr[j].logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ mbarr[j].label + "</a></th><td>" + mbarr[j].bid +"</td><td>" + mbarr[j].buy + "</td><td></td><td></td></tr>");
-							}
-							//console.log($(data).find('.alR'));
-						}else if (darr[i].Type == "SBI_fund"){
-							let fndarr = $(data).find('.baseCurrency-fund01-content-inner div.bold');
-							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ darr[i].Label + "</a></th><td>" + $(fndarr[0]).text() +"</td><td></td><td></td><td></td></tr>");
-							console.log(fndarr);
-						}else{
-							let slbl = $(data).find('.zzDege').text();
-							let sprc = $(data).find('.YMlKec' + '.fxKbKc').text();
-							console.log(slbl);
-							console.log(sprc);
-							$("tbody").append("<tr><th style='background-image: url(" + darr[i].Logo + ");'><a target='_blank' href='" + darr[i].URL + "'>"+ slbl + "</a></th><td>" + sprc +"</td><td></td><td></td><td></td></tr>");
-						}
-					})
-					.fail(function( data ) {
-						// ...
-					});
-				}
-		});
-	}
-	getprices();
-
-
 });
 	
 </script>
